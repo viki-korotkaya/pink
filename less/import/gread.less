@@ -1,0 +1,40 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-size: @text-size-14;
+	font-family: @font;
+	color: @color;
+	font-weight: @weight;
+	overflow-x: hidden;
+	
+	.page-header {
+		min-width: 320px;
+		/*max-width: 1440px;*/
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+		
+	}
+	
+	.page-main {
+		display: flex;
+		flex-direction: column;
+		min-width: 320px;
+		/*x-width: 1440px;*/
+		
+		
+	}
+	.page-footer {
+		min-width: 320px;
+		/*max-width: 1440px;*/
+	}
+}

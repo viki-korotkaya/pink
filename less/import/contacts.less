@@ -1,0 +1,154 @@
+.contacts {
+	display: flex;
+	flex-direction: column;
+} 
+.contacts__header {
+		width: 230px;
+		margin: 40px auto;
+		font-size: @text-size-24;
+		line-height: 30px;
+		text-align: center;
+		font-weight: @light;
+		text-align: center;
+}
+.contacts__call {
+	margin-bottom: 35px;
+	.contacts__call-header {
+		font-size: @text-size-18;
+		font-weight: @fat;
+		text-align: center;
+		margin: 0;
+		line-height: 24px;
+	}
+	.contacts__call-phone {
+		font-size: @text-size-24;
+		font-weight: @weight;
+		color: @color-pink;
+		text-align: center;
+		line-height: 32px;
+		margin: 0;
+	}
+}
+
+.contacts__e-mail {
+	margin-bottom: 35px;
+	.contacts__e-mail-header {
+		font-size: @text-size-18;
+		font-weight: @fat;
+		text-align: center;
+		margin: 0;
+		line-height: 24px;
+	}
+	.contacts__e-mail-data {
+		display: block;
+		font-size: @text-size-24;
+		font-weight: @weight;
+		color: @color-pink;
+		line-height: 32px;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+	}
+	.contacts__e-mail-data:hover {
+		text-decoration: underline;
+		color: @color-black;
+
+	}
+	.contacts__e-mail-data:active {
+		color: @color-grey;
+	}
+}
+
+.contacts__address {
+	margin-bottom: 35px;
+	.contacts__address-header {
+		font-size: @text-size-18;
+		font-weight: @fat;
+		text-align: center;
+		margin: 0;
+		line-height: 24px;
+	}
+	.contacts__address-data {
+		font-size: @text-size-24;
+		font-weight: @weight;
+		color: @color-pink;
+		text-align: center;
+		line-height: 32px;
+		margin: 0;
+	}
+}
+.map {
+	position: relative;
+	overflow: hidden;
+	.triangle {
+		position: absolute;
+		border-style: solid;
+		border-width: 5vw 50vw 0 50vw;
+		border-color: @color-white transparent transparent transparent;
+	}
+	
+	iframe {
+		margin-top: 0;
+		padding-top: 0;
+    	height: 100%;
+    	width: 100%;
+    
+	}
+}
+
+
+@media screen and (min-width: 700px) {
+	.contacts{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+		
+	.contacts__header {
+		width: auto;
+		margin: 55px auto;
+		padding: 0 20vw;
+		font-size: @text-size-40;
+		font-weight: @light;
+	}
+	.contacts__call,
+	.contacts__e-mail {
+		flex-basis: 320px; 
+		flex-grow: 1; 
+	}
+	.contacts__address,
+	.map {
+		width: 100vw;
+	}
+	.map {
+		height: 385px;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	.contacts__header {
+		padding: 0 29vw;
+		font-size: @text-size-52;
+		line-height: 52px;
+	}
+	.map {
+		height: 530px;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	
+	.contacts__header {
+		padding: 0 470px;
+		font-size: 52px;
+	}
+	.map {
+		.triangle {
+			position: absolute;
+			border-style: solid;
+			border-width: 95px 720px 0 720px;
+			border-color: @color-white transparent transparent transparent;
+		}
+	}
+}
