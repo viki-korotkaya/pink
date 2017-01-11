@@ -1,0 +1,228 @@
+.download {
+  color: @color-white;
+}
+.download__slogan {
+  padding-top: 95px;
+
+  background: url("@{dir}/bg-photo.png") no-repeat top center;
+  background-size: cover;
+  .download__slogan-wrap {
+    width: 230px;
+    margin: 0 auto 25px auto;
+
+    font-size: @text-size-24;
+    font-weight: @light;
+
+    text-align: center;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+  }
+}	
+
+.download__order {
+  padding-top: 29px;
+  padding-right: 5%;
+  padding-bottom: 30px;
+  padding-left: 5%;
+
+  background-color: #1d2631;
+}
+.download__order-btn {
+  display: block;
+
+  margin: 0 auto 30px auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  font-family: @font;
+  font-size: @text-size-18;
+  font-weight: @fat;
+  line-height: 18px;
+
+  cursor: pointer;
+  text-align: center;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+
+  color: @color-white;
+  border: 4px solid @color-white;
+  border-radius: 30px;
+  outline: none;
+  background-color: #1d2631;
+}
+.download__order-btn:hover {
+  color: @color-pink;
+  background: @color-white;;
+}
+.download__order-btn:active {
+  color: @color-pink-muted;
+  background: @color-white;
+}
+.download__order-device {
+  display: flex;
+
+  margin-bottom: 25px;
+
+  font-size: 0;
+
+  justify-content: center;
+  a {
+    display: block;
+
+    width: 28%;
+    height: 60px;
+
+    text-decoration: none;
+
+    color: @color-white;
+  }
+  .apple {
+    background: url("@{dir}/apple-logo.svg") no-repeat;
+    background-position: top center;
+  }
+  .android {
+    background: url("@{dir}/android-logo.svg") no-repeat;
+    background-position: center;
+  }
+  .microsoft {
+    background: url("@{dir}/microsoft-logo.svg") no-repeat center;
+    background-position: center;
+  }
+}
+.download__details {
+  margin: 0 12.5% 0 12.5%;
+
+  font-size: @text-size-14;
+  font-weight: @light;
+  line-height: 24px;
+
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+  .download {
+    padding-top: 14vw;
+    padding-left: 4vw;
+
+    background: url("@{dir}/hand700.png") no-repeat bottom,
+    url("@{dir}/bg-photo700.png") no-repeat top center;
+    background-size: auto, cover;
+  }
+
+  .download__slogan {
+    width: 335px;
+    margin-bottom: 5vw;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    background: transparent;
+    .download__slogan-wrap {
+      padding: 0 20px;
+
+      font-size: @text-size-40;
+    }
+
+    img {
+      display: none;
+    }
+  }
+  .download__order {
+    width: 335px;
+    padding-bottom: 0;
+
+    background: transparent;
+  }
+  .download__order-btn {
+    margin-bottom: 6.5vw;
+
+    background: transparent;
+  }
+  .download__order-btn:hover {
+    color: @color-pink;
+    background: @color-white;
+  }
+
+  .download__order-btn:active {
+    color: @color-pink-muted;
+    background: @color-white;
+  }
+
+  .download__order-device {
+    margin-bottom: 6.4vw;
+
+    justify-content: space-between;
+  }
+  .download__details {
+    margin-right: 0;
+    margin-bottom: 15vw;
+    margin-left: 0;
+
+    font-size: @text-size-18;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .download {
+    padding: 10vw 10% 0 10%;
+
+    background: url("@{dir}/hand.png") no-repeat bottom,
+    url("@{dir}/bg-photo1200.png") no-repeat top center;
+    background-size: auto, cover;
+  }
+  .download__slogan {
+    margin-top: 130px;
+    margin-bottom: 0;
+    padding: 0;
+    .download__slogan-wrap {
+      margin-bottom: 65px;
+      padding: 0;
+
+      font-size: @text-size-50;
+    }
+    img {
+      display: none;
+    }
+  }
+  .download__order {
+    padding: 0 2%;
+  }
+  .download__order-btn {
+    margin-bottom: 5vw;
+  }
+  .download__order-device {
+    margin-bottom: 5vw;
+  }
+  .download__details {
+    margin: 0;
+    margin-bottom: 120px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .download {
+    padding: 120px 230px 0 230px;
+  }
+  .download__slogan {
+    .download__slogan-wrap {
+      font-size: 52px;
+
+      text-align: center;
+    }
+  }
+  .download__order {
+    padding: 0;
+  }
+  .download__order-btn {
+    margin-bottom: 50px;
+  }
+  .download__order-device {
+    margin-bottom: 50px;
+  }
+  .download__details {
+    margin-bottom: 130px;
+  }
+}

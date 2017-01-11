@@ -1,0 +1,199 @@
+
+.promo {
+  margin-top: 50px;
+}
+.promo__header {
+  margin-top: 0;
+  margin-bottom: 10.9%;
+  padding-right: 10.8%;
+  padding-left: 10.8%;
+
+  font-size: @text-size-24;
+  font-weight: @light;
+
+  text-align: center;
+}
+
+.promo-wrap {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-top: 9vw;
+
+  background: linear-gradient(177deg, @color-white 5vw, #f2f2f2 2vw);
+  background-color: #f2f2f2;
+  .screen320 {
+    margin: 0 auto;
+  }
+  .screen700 {
+    display: none;
+  }
+}
+.promo__item-wrap {
+  padding-top: 10vw;
+}
+.promo__item {
+  margin: 30px 8%;
+
+  line-height: 24px;
+
+  text-align: center;
+  .iphone_item1 {
+    display: none;
+  }
+  .promo__item-header {
+    margin-top: 0;
+  }
+  .promo__item-descr {
+    margin-bottom: 0;
+  }
+}
+
+
+@media screen and (min-width: 700px) {
+  .promo__header {
+    margin: 0 auto;
+
+    font-size: @text-size-40;
+    font-weight: @light;
+
+    text-align: center;
+  }
+
+  .promo-wrap {
+    flex-direction: row;
+
+    padding-top: 0;
+    .screen320 {
+      display: none;
+    }
+    .screen700 {
+      display: block;
+
+      width: 268px;
+      height: 485px;
+      margin: 0 6vw;
+
+      order: 1;
+    }
+  }
+  .promo__item-wrap {
+    width: 50%;
+    padding-top: 5vw;
+
+    order: 2;
+  }
+  .promo__item {
+    margin-bottom: 0;
+    margin-left: 0;
+
+    text-align: left;
+    .iphone_item1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .promo {
+    margin-top: 65px;
+  }
+  .promo__header {
+    font-size: @text-size-52;
+    line-height: 60px;
+  }
+  .promo-wrap {
+    flex-direction: row;
+
+    margin-top: 0;
+    padding-top: 0;
+
+    background: linear-gradient(177deg, @color-white 19%, #f2f2f2 12%);
+    .screen320 {
+      display: none;
+    }
+    .screen700 {
+      display: none;
+    }
+  }
+
+  .promo__item-wrap {
+    display: flex;
+
+    width: auto;
+    padding-right: 10.8%;
+    padding-left: 10.8%;
+
+    justify-content: space-between;
+    order: 0;
+  }
+
+  .promo__item {
+    margin: 0;
+    margin-bottom: 65px;
+
+    font-size: @text-size-16;
+
+    text-align: center;
+
+    .iphone_item1 {
+      display: block;
+
+      margin: 0 auto;
+    }
+    .promo__item-header {
+      margin: 0;
+      padding: 40px 80px;
+
+      font-size: @text-size-26;
+      line-height: 36px;
+    }
+    .promo__item-descr {
+      margin: 0;
+      padding: 0 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .promo {
+    margin-top: 70px;
+  }
+  .promo__header {
+    margin-bottom: 0;
+
+    font-size: 52px;
+  }
+
+
+  .promo__item-wrap {
+    padding-right: 230px;
+    padding-left: 230px;
+  }
+
+  .promo__item {
+    margin: 0;
+    padding: 0 20px;
+
+    font-size: 16px;
+
+    .iphone_item1 {
+      padding: 0;
+
+      text-align: center;
+    }
+
+    .promo__item-header {
+      padding: 60px 10px;
+
+      font-size: 36px;
+      line-height: 36px;
+    }
+    .promo__item-descr {
+      margin: 0;
+      padding: 0 35px;
+    }
+  }
+}
+

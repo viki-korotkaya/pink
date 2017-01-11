@@ -1,0 +1,1472 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 320px;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-size: 0.875em;
+	font-family: 'Open Sans', sans-serif;
+	color: #000000;
+	font-weight: 400;
+	overflow-x: hidden;
+}
+
+body .page-header {
+	min-width: 320px; /*max-width: 1440px;*/
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+
+body .page-main {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 320px; /*x-width: 1440px;*/
+}
+
+body .page-footer {
+	min-width: 320px; /*max-width: 1440px;*/
+}
+
+.page-header__inner {
+	position: absolute;
+	left: 0;
+	right: 0;
+	color: #ffffff;
+}
+
+.page-header__inner-ld {
+	display: none;
+}
+
+/*Navigation of mobile layout*/
+
+.main-nav__toggle {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 21px 6%;
+	background: #1d2631;
+	opacity: 0.7;
+}
+
+.main-nav__toggle a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-nav__toggle .logo-glasses {
+	display: none;
+}
+
+.main-nav__toggle .logo-glasses-pink {
+	display: none;
+}
+
+.main-nav__toggle .logo-glasses-muted {
+	display: none;
+}
+
+.main-nav__toggle svg {
+	width: 74px;
+	height: 23px;
+	fill: #ffffff;
+	padding-left: 10px;
+}
+
+.main-nav__toggle a:active svg {
+	fill: #6c7682;
+}
+
+.main-nav__toggle .main-nav__toggle-menu {
+	display: block;
+	width: 50px;
+	height: 24px;
+}
+
+.main-nav__toggle .main-nav__toggle-menu .menu-icon {
+	width: 50px;
+	height: 5px;
+	background: #ffffff;
+	margin: 5px 0;
+}
+
+.main-nav__toggle .main-nav__toggle-menu .menu-icon:first-child {
+	margin-top: 0;
+}
+
+.main-nav__toggle .main-nav__toggle-menu:hover .menu-icon {
+	background: #d22856;
+}
+
+.main-nav__toggle .main-nav__toggle-menu:active .menu-icon {
+	opacity: 0.5;
+}
+
+/*Styles for open menu*/
+
+.main-nav__toggle--open-menu {
+	padding: 21px 6% 25px 6%;
+	opacity: 1;
+	background-color: #283645;
+	border-bottom: 1px solid black;
+	transition: all 0.3s;
+}
+
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close {
+	display: block;
+	position: relative;
+	width: 50px;
+	height: 24px;
+	z-index: 10;
+	background: #283645;
+}
+
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close div {
+	display: none;
+}
+
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close::before,
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close::after {
+	content: "";
+	position: absolute;
+	width: 25px;
+	height: 3px;
+	background-color: #ffffff;
+	border-radius: 1px;
+	top: 10px;
+	left: 25px;
+}
+
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close::before {
+	transform: rotate(45deg);
+}
+
+.main-nav__toggle--open-menu .main-nav__toggle-menu--close::after {
+	transform: rotate(-45deg);
+}
+
+.main-nav__toggle--open-menu:hover .main-nav__toggle-menu--close::before,
+.main-nav__toggle--open-menu:hover .main-nav__toggle-menu--close::after {
+	background-color: #d22856;
+}
+
+.main-nav__toggle--open-menu:active .main-nav__toggle-menu--close::before,
+.main-nav__toggle--open-menu:active .main-nav__toggle-menu--close::after {
+	opacity: 0.5;
+}
+
+.main-nav__list {
+	display: none;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.main-nav__list li {
+	display: block;
+	border-top: 1px solid #485461;
+	border-bottom: 1px solid black;
+	background: #283645;
+}
+
+.main-nav__list a {
+	display: block;
+	padding-top: 18px;
+	padding-bottom: 21px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.125em;
+	line-height: 32px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.main-nav__list a:hover {
+	color: #d22856;
+}
+
+.main-nav__list a:active {
+	color: #f1becc;
+}
+
+.download {
+	color: #ffffff;
+}
+
+.download__slogan {
+	padding-top: 95px;
+	background: url("../img/bg-photo.png") no-repeat top center;
+	background-size: cover;
+}
+
+.download__slogan .download__slogan-wrap {
+	width: 230px;
+	margin: 0 auto 25px auto;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+}
+
+.download__slogan img {
+	display: block;
+}
+
+.download__order {
+	background-color: #1d2631;
+	padding-bottom: 30px;
+	padding-top: 29px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.download__order-btn {
+	display: block;
+	margin: 0 auto 30px auto;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	vertical-align: top;
+	background-color: #1d2631;
+	border: 4px solid #ffffff;
+	border-radius: 30px;
+	outline: none;
+	cursor: pointer;
+	color: #ffffff;
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.125em;
+	line-height: 18px;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+}
+
+.download__order-btn:hover {
+	color: #d22856;
+	background: #ffffff;
+}
+
+.download__order-btn:active {
+	color: #f1becc;
+	background: #ffffff;
+}
+
+.download__order-device {
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 0;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 25px;
+}
+
+.download__order-device a {
+	display: block;
+	text-decoration: none;
+	color: #ffffff;
+	width: 28%;
+	height: 60px;
+}
+
+.download__order-device .apple {
+	background: url("../img/apple-logo.svg") no-repeat;
+	background-position: top center;
+}
+
+.download__order-device .android {
+	background: url("../img/android-logo.svg") no-repeat;
+	background-position: center;
+}
+
+.download__order-device .microsoft {
+	background: url("../img/microsoft-logo.svg") no-repeat center;
+	background-position: center;
+}
+
+.download__details {
+	margin: 0 12.5% 0 12.5%;
+	text-align: center;
+	font-size: 0.875em;
+	line-height: 24px;
+	font-weight: 300;
+}
+
+.promo {
+	margin-top: 50px;
+}
+
+.promo__header {
+	margin-top: 0;
+	margin-bottom: 10.9%;
+	padding-left: 10.8%;
+	padding-right: 10.8%;
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+}
+
+.promo-wrap {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: #f2f2f2;
+	margin: 0;
+	margin-top: 9vw;
+	background: linear-gradient(177deg, #ffffff 5vw, #f2f2f2 2vw);
+}
+
+.promo-wrap .screen320 {
+	margin: 0 auto;
+}
+
+.promo-wrap .screen700 {
+	display: none;
+}
+
+.promo__item-wrap {
+	padding-top: 10vw;
+}
+
+.promo__item {
+	margin: 30px 8%;
+	text-align: center;
+	line-height: 24px;
+}
+
+.promo__item .iphone_item1 {
+	display: none;
+}
+
+.promo__item .promo__item-header {
+	margin-top: 0;
+}
+
+.promo__item .promo__item-descr {
+	margin-bottom: 0;
+}
+
+.research {
+	display: none;
+}
+
+.reviews {
+	margin-bottom: 45px;
+}
+
+.reviews svg {
+	display: none;
+}
+
+.reviews .prev,
+.reviews .next {
+	display: none;
+}
+
+.slider-reviews__item {
+	margin: 45px 8% 50px 8%;
+	text-align: center;
+	line-height: 24px;
+}
+
+.slider-reviews__item .slider-reviews__header {
+	margin-top: 0;
+}
+
+.slider-reviews__item .slider-reviews__text {
+	margin-bottom: 0;
+}
+
+.slider-reviews__item .slider-reviews__header2 {
+	display: none;
+}
+
+.slider__pagination {
+	text-align: center;
+}
+
+.slider__pagination span {
+	vertical-align: middle;
+	cursor: pointer;
+	height: 8px;
+	width: 8px;
+	margin: 0 15px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.slider__pagination .slider__pagination-active {
+	height: 10px;
+	width: 10px;
+	border: 3px solid #283645;
+	background: #ffffff;
+}
+
+.price {
+	background: linear-gradient(177deg, #ffffff 5vw, #f2f2f2 2vw);
+	overflow-x: hidden;
+}
+
+.price .slider__pagination {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.price .slider__pagination span {
+	vertical-align: middle;
+	cursor: pointer;
+	height: 8px;
+	width: 8px;
+	margin: 0 15px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.price .slider__pagination-active {
+	height: 10px;
+	width: 10px;
+	border: 3px solid #283645;
+	background: #ffffff;
+}
+
+.price__table-wrap--full {
+	display: none;
+}
+
+.price__table-wrap {
+	position: relative;
+	left: -87vw;
+	width: 270vw;
+	margin-top: 90px;
+	margin-bottom: 45px;
+	font-size: 0;
+	transition: left 0.3s;
+}
+
+.base,
+.standart,
+.unlim {
+	display: inline-block;
+	width: 90vw;
+}
+
+.base .table__head,
+.standart .table__head,
+.unlim .table__head {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 30px;
+	background: #283645;
+	text-align: center;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+
+.base .table__row,
+.standart .table__row,
+.unlim .table__row {
+	padding: 17px 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 30px;
+	border: 1px solid #e5e5e5;
+	background: #ffffff;
+	text-transform: uppercase;
+}
+
+.base .table__row .yes,
+.standart .table__row .yes,
+.unlim .table__row .yes {
+	float: right;
+	fill: #3dc644;
+}
+
+.base .table__row .no,
+.standart .table__row .no,
+.unlim .table__row .no {
+	float: right;
+	fill: #f25b26;
+}
+
+.standart .table__head {
+	background: #283645 url("../img/hit.png") no-repeat;
+}
+
+.contacts {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.contacts__header {
+	width: 230px;
+	margin: 40px auto;
+	font-size: 1.5em;
+	line-height: 30px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.contacts__call {
+	margin-bottom: 35px;
+}
+
+.contacts__call .contacts__call-header {
+	font-size: 1.125em;
+	font-weight: 700;
+	text-align: center;
+	margin: 0;
+	line-height: 24px;
+}
+
+.contacts__call .contacts__call-phone {
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #d22856;
+	text-align: center;
+	line-height: 32px;
+	margin: 0;
+}
+
+.contacts__e-mail {
+	margin-bottom: 35px;
+}
+
+.contacts__e-mail .contacts__e-mail-header {
+	font-size: 1.125em;
+	font-weight: 700;
+	text-align: center;
+	margin: 0;
+	line-height: 24px;
+}
+
+.contacts__e-mail .contacts__e-mail-data {
+	display: block;
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #d22856;
+	line-height: 32px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+.contacts__e-mail .contacts__e-mail-data:hover {
+	text-decoration: underline;
+	color: #283645;
+}
+
+.contacts__e-mail .contacts__e-mail-data:active {
+	color: #bec2c7;
+}
+
+.contacts__address {
+	margin-bottom: 35px;
+}
+
+.contacts__address .contacts__address-header {
+	font-size: 1.125em;
+	font-weight: 700;
+	text-align: center;
+	margin: 0;
+	line-height: 24px;
+}
+
+.contacts__address .contacts__address-data {
+	font-size: 1.5em;
+	font-weight: 400;
+	color: #d22856;
+	text-align: center;
+	line-height: 32px;
+	margin: 0;
+}
+
+.map {
+	position: relative;
+	overflow: hidden;
+}
+
+.map .triangle {
+	position: absolute;
+	border-style: solid;
+	border-width: 5vw 50vw 0 50vw;
+	border-color: #ffffff transparent transparent transparent;
+}
+
+.map iframe {
+	margin-top: 0;
+	padding-top: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.page-footer {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
+
+.main-nav__toggle {
+	padding-bottom: 25px;
+}
+
+.main-nav__toggle .logo-glasses {
+	display: inline;
+}
+
+.main-nav__toggle .main-nav__toggle-menu {
+	margin-top: 15px;
+}
+
+.main-nav__toggle a:hover .logo-glasses {
+	display: none;
+}
+
+.main-nav__toggle a:hover .logo-glasses-pink {
+	display: inline;
+}
+
+.main-nav__toggle a:active .logo-glasses {
+	display: none;
+}
+
+.main-nav__toggle a:active .logo-glasses-pink {
+	display: none;
+}
+
+.main-nav__toggle a:active .logo-glasses-muted {
+	display: inline;
+}
+
+.download {
+	padding-top: 14vw;
+	padding-left: 4vw;
+	background: url("../img/hand700.png") no-repeat bottom, url("../img/bg-photo700.png") no-repeat top center;
+	background-size: auto, cover;
+}
+
+.download__slogan {
+	background: transparent;
+	width: 335px;
+	margin-bottom: 5vw;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.download__slogan .download__slogan-wrap {
+	padding: 0 20px;
+	font-size: 2.5em;
+}
+
+.download__slogan img {
+	display: none;
+}
+
+.download__order {
+	width: 335px;
+	background: transparent;
+	padding-bottom: 0;
+}
+
+.download__order-btn {
+	background: transparent;
+	margin-bottom: 6.5vw;
+}
+
+.download__order-btn:hover {
+	color: #d22856;
+	background: #ffffff;
+}
+
+.download__order-btn:active {
+	color: #f1becc;
+	background: #ffffff;
+}
+
+.download__order-device {
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-bottom: 6.4vw;
+}
+
+.download__details {
+	font-size: 1.125em;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 15vw;
+}
+
+.promo__header {
+	font-size: 2.5em;
+	font-weight: 300;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.promo-wrap {
+	-ms-flex-direction: row;
+	flex-direction: row;
+	padding-top: 0;
+}
+
+.promo-wrap .screen320 {
+	display: none;
+}
+
+.promo-wrap .screen700 {
+	display: block;
+	margin: 0 6vw;
+	-ms-flex-order: 1;
+	order: 1;
+	width: 268px;
+	height: 485px;
+}
+
+.promo__item-wrap {
+	-ms-flex-order: 2;
+	order: 2;
+	width: 50%;
+	padding-top: 5vw;
+}
+
+.promo__item {
+	text-align: left;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+.promo__item .iphone_item1 {
+	display: none;
+}
+
+.research {
+	display: block;
+	padding-top: 55px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.img-time {
+	display: inline-block;
+	width: 262px;
+	height: 284px;
+}
+
+.img-time .second24 {
+	display: none;
+}
+
+.research__description {
+	display: inline-block;
+	width: 50%;
+	padding-left: 8%;
+	text-align: left;
+	vertical-align: top;
+	font-size: 1em;
+	line-height: 24px;
+}
+
+.research__description .research__description-title {
+	padding-top: 2vw;
+	line-height: 36px;
+	font-size: 1.625em;
+}
+
+.research__description .research__description-link {
+	color: #d22856;
+}
+
+.reviews {
+	margin-bottom: 0;
+}
+
+.slider-reviews__item {
+	font-size: 1.125em;
+}
+
+.slider-reviews__item .slider-reviews__header {
+	display: none;
+}
+
+.slider-reviews__item .slider-reviews__header2 {
+	display: block;
+}
+
+.slider-reviews__item .slider-reviews__header2 h2 {
+	margin: 40px 0 5px 0;
+}
+
+.price {
+	background: linear-gradient(177deg, #ffffff 19%, #f2f2f2 12%);
+}
+
+.price .slider__pagination {
+	display: none;
+}
+
+.price__table-wrap {
+	display: none;
+}
+
+.price__table-wrap--full {
+	display: block;
+	padding: 0 6vw;
+	margin-top: 90px;
+	margin-bottom: 45px;
+}
+
+.price__table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 40px;
+}
+
+.price__table th,
+.price__table td {
+	width: 25%;
+}
+
+.price__table th {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 30px;
+	background: #283645;
+	text-align: center;
+	border-left: 1px solid #e5e5e5;
+	border-right: 1px solid #e5e5e5;
+}
+
+.price__table .nothing {
+	background: #f2f2f2;
+	border: none;
+}
+
+.price__table .stand {
+	background: #283645 url("../img/hit.png") no-repeat;
+	background-size: 70px auto;
+}
+
+.price__table td {
+	padding: 10px 0;
+	font-size: 0.875em;
+	font-weight: 400;
+	line-height: 30px;
+	border: 1px solid #e5e5e5;
+	background: #ffffff;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.price__table td .yes {
+	fill: #3dc644;
+}
+
+.price__table td .no {
+	fill: #f25b26;
+}
+
+.price__table tr > td:first-child {
+	padding-left: 2.5vw;
+	text-align: left;
+}
+
+.contacts {
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.contacts__header {
+	width: auto;
+	margin: 55px auto;
+	padding: 0 20vw;
+	font-size: 2.5em;
+	font-weight: 300;
+}
+
+.contacts__call,
+.contacts__e-mail {
+	-ms-flex-preferred-size: 320px;
+	flex-basis: 320px;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.contacts__address,
+.map {
+	width: 100vw;
+}
+
+.map {
+	height: 385px;
+}
+
+.page-footer {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 35px 6.5vw;
+}
+
+.page-footer__logo {
+	-ms-flex-preferred-size: 207px;
+	flex-basis: 207px;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.page-footer__logo img {
+	display: inline-block;
+}
+
+.page-footer__logo .logo-glasses-black {
+	display: none;
+}
+
+.page-footer__logo .logo-glasses-muted {
+	display: none;
+}
+
+.page-footer__logo svg {
+	margin-left: 10px;
+	fill: #283645;
+}
+
+.page-footer__logo a:hover .logo-glasses-pink {
+	display: none;
+}
+
+.page-footer__logo a:hover .logo-glasses-black {
+	display: inline-block;
+}
+
+.page-footer__logo a:active .logo-glasses-pink {
+	display: none;
+}
+
+.page-footer__logo a:active .logo-glasses-black {
+	display: none;
+}
+
+.page-footer__logo a:active .logo-glasses-muted {
+	display: inline-block;
+}
+
+.page-footer__logo a:active svg {
+	fill: #bec2c7;
+}
+
+.page-footer__social {
+	-ms-flex-preferred-size: 207px;
+	flex-basis: 207px;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.page-footer__social .social-links__item {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border: 3px solid #e9ebec;
+	border-radius: 50%;
+	background: url("../img/sprite.png") no-repeat;
+}
+
+.page-footer__social .social-links__item:hover {
+	border: 3px solid #283645;
+}
+
+.page-footer__social .social-links__item:active {
+	border: 3px solid #e9ebec;
+}
+
+.page-footer__social .tw {
+	margin-right: 10px;
+	background-position: -12px -12px;
+}
+
+.page-footer__social .tw:active {
+	background-position: 13px -59px;
+}
+
+.page-footer__social .fb {
+	margin-right: 10px;
+	background-position: -53px 12px;
+}
+
+.page-footer__social .fb:active {
+	background-position: -53px -59px;
+}
+
+.page-footer__social .youtube {
+	background-position: -112px 12px;
+}
+
+.page-footer__social .youtube:active {
+	background-position: -112px -59px;
+}
+
+.page-footer__copyright {
+	-ms-flex-preferred-size: 207px;
+	flex-basis: 207px;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: right;
+}
+
+.page-footer__copyright p {
+	display: inline-block;
+	padding-top: 5px;
+	text-align: right;
+	vertical-align: top;
+}
+
+.page-footer__copyright a {
+	display: inline-block;
+	width: 28px;
+	height: 32px;
+	margin: 12px 5px 0 5px;
+	background: url("../img/sprite.png") no-repeat;
+}
+
+.page-footer__copyright .glukhanko {
+	background-position: -205px -5px;
+}
+
+.page-footer__copyright .glukhanko:hover {
+	background-position: -205px -89px;
+}
+
+.page-footer__copyright .glukhanko:active {
+	background-position: -205px -165px;
+}
+
+.page-footer__copyright .htmlacademy {
+	background-position: -278px -6px;
+}
+
+.page-footer__copyright .htmlacademy:hover {
+	background-position: -278px -90px;
+}
+
+.page-footer__copyright .htmlacademy:active {
+	background-position: -278px -165px;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+.page-header__inner {
+	display: none;
+}
+
+.page-header__inner-ld {
+	position: absolute;
+	display: block;
+	left: 0;
+	right: 0;
+	color: #ffffff;
+}
+
+.main-nav__ld {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 21px 10.8% 40px 10.8%;
+	background: #1d2631;
+	opacity: 0.7;
+}
+
+.logo-navigation {
+	margin: 0 12vw 0 0;
+	padding: 0;
+}
+
+.logo-navigation .logo-ld {
+	display: inline;
+	width: 146px;
+	height: 40px;
+}
+
+.main-nav__ld-items {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-nav__ld-items li {
+	display: inline-block;
+	font-size: 1.125em;
+	line-height: 24px;
+	margin-left: 4.7vw;
+}
+
+.main-nav__ld-items li .item-nav {
+	position: relative;
+	display: block;
+	padding-top: 15px;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: right;
+}
+
+.main-nav__ld-items li .item-nav:hover::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 2px;
+	background-color: #ffffff;
+}
+
+.main-nav__ld-items li .item-nav:active {
+	color: #596470;
+}
+
+.main-nav__ld-items li .item-nav:active::after {
+	display: none;
+}
+
+.download {
+	padding: 10vw 10% 0 10%;
+	background: url("../img/hand.png") no-repeat bottom, url("../img/bg-photo1200.png") no-repeat top center;
+	background-size: auto, cover;
+}
+
+.download__slogan {
+	margin-top: 130px;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.download__slogan .download__slogan-wrap {
+	margin-bottom: 65px;
+	padding: 0;
+	font-size: 3.125em;
+}
+
+.download__slogan img {
+	display: none;
+}
+
+.download__order {
+	padding: 0 2%;
+}
+
+.download__order-btn {
+	margin-bottom: 5vw;
+}
+
+.download__order-device {
+	margin-bottom: 5vw;
+}
+
+.download__details {
+	margin: 0;
+	margin-bottom: 120px;
+}
+
+.promo {
+	margin-top: 65px;
+}
+
+.promo__header {
+	font-size: 3.25em;
+	line-height: 60px;
+}
+
+.promo-wrap {
+	-ms-flex-direction: row;
+	flex-direction: row;
+	margin-top: 0;
+	padding-top: 0;
+	background: linear-gradient(177deg, #ffffff 19%, #f2f2f2 12%);
+}
+
+.promo-wrap .screen320 {
+	display: none;
+}
+
+.promo-wrap .screen700 {
+	display: none;
+}
+
+.promo__item-wrap {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: auto;
+	-ms-flex-order: 0;
+	order: 0;
+	padding-left: 10.8%;
+	padding-right: 10.8%;
+}
+
+.promo__item {
+	margin: 0;
+	margin-bottom: 65px;
+	text-align: center;
+	font-size: 1em;
+}
+
+.promo__item .iphone_item1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.promo__item .promo__item-header {
+	margin: 0;
+	font-size: 1.625em;
+	padding: 40px 80px;
+	line-height: 36px;
+}
+
+.promo__item .promo__item-descr {
+	margin: 0;
+	padding: 0 40px;
+}
+
+.research {
+	margin-bottom: 70px;
+	background: #f2f2f2;
+	padding-bottom: 50px;
+}
+
+.img-time {
+	width: 301px;
+	height: 346px;
+}
+
+.img-time .first24 {
+	display: none;
+}
+
+.img-time .second24 {
+	display: block;
+}
+
+.reviews {
+	position: relative;
+}
+
+.reviews svg {
+	display: block;
+	margin: 0 auto;
+	fill: #efefef;
+}
+
+.reviews .prev,
+.reviews .next {
+	display: block;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 15vw;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: #bec2c7;
+	font-size: 2.25em;
+	font-weight: 300;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+.reviews .next {
+	left: 80%;
+	border-radius: 3px 0 0 3px;
+}
+
+.slider-reviews__item {
+	width: 700px;
+	margin: 60px auto 15px auto;
+}
+
+.slider__pagination {
+	display: none;
+}
+
+.price__table-wrap--full {
+	margin-top: 170px;
+}
+
+.price__table th,
+.price__table td {
+	width: 235px;
+}
+
+.contacts__header {
+	padding: 0 29vw;
+	font-size: 3.25em;
+	line-height: 52px;
+}
+
+.map {
+	height: 530px;
+}
+
+.page-footer {
+	padding-right: 10.8%;
+}
+
+.page-footer {
+	padding-left: 230px;
+	padding-right: 230px;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
+
+.main-nav__ld {
+	padding: 21px 220px 40px 220px;
+}
+
+.logo-navigation {
+	margin: 0 180px 0 0;
+}
+
+.main-nav__ld-items li {
+	margin-left: 60px;
+	font-size: 18px;
+}
+
+.download {
+	padding: 120px 230px 0 230px;
+}
+
+.download__slogan .download__slogan-wrap {
+	text-align: center;
+	font-size: 52px;
+}
+
+.download__order {
+	padding: 0;
+}
+
+.download__order-btn {
+	margin-bottom: 50px;
+}
+
+.download__order-device {
+	margin-bottom: 50px;
+}
+
+.download__details {
+	margin-bottom: 130px;
+}
+
+.promo {
+	margin-top: 70px;
+}
+
+.promo__header {
+	font-size: 52px;
+	margin-bottom: 0;
+}
+
+.promo__item-wrap {
+	padding-left: 230px;
+	padding-right: 230px;
+}
+
+.promo__item {
+	margin: 0;
+	padding: 0 20px;
+	font-size: 16px;
+}
+
+.promo__item .iphone_item1 {
+	padding: 0;
+	text-align: center;
+}
+
+.promo__item .promo__item-header {
+	font-size: 36px;
+	padding: 60px 10px;
+	line-height: 36px;
+}
+
+.promo__item .promo__item-descr {
+	margin: 0;
+	padding: 0 35px;
+}
+
+.research {
+	padding: 70px 10px;
+}
+
+.research__description {
+	width: 700px;
+}
+
+.research__description .research__description-title {
+	padding-top: 30px;
+	font-size: 36px;
+}
+
+.reviews .prev {
+	left: 285px;
+}
+
+.reviews .next {
+	top: 50%;
+	left: 1105px;
+}
+
+.price {
+	padding-left: 230px;
+	padding-right: 230px;
+}
+
+.price__table-wrap--full {
+	padding: 0;
+}
+
+.contacts__header {
+	padding: 0 470px;
+	font-size: 52px;
+}
+
+.map .triangle {
+	position: absolute;
+	border-style: solid;
+	border-width: 95px 720px 0 720px;
+	border-color: #ffffff transparent transparent transparent;
+}
+
+}
+
