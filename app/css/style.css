@@ -43,7 +43,7 @@ body .page-footer {
 }
 
 .page-header__inner {
-	position: fixed;
+	position: absolute;
 	right: 0;
 	left: 0;
 	color: #ffffff;
@@ -1091,7 +1091,7 @@ body .page-footer {
 }
 
 .page-header__inner-ld {
-	position: fixed;
+	position: absolute;
 	right: 0;
 	left: 0;
 	display: block;
